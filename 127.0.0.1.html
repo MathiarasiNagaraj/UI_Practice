@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head> </head>
+  <body>
+   <h1 align="center" color="red">Practice</h1>
+   <h3>Practice makes an man better</h3>
+    <p align="right">
+      <strong>Lorem ipsum dolor</strong> sit amet consectetur adipisicing elit. Ad, dolorum! Amet
+      autem, corrupti, aperiam placeat cum totam facere ex quia reiciendis fugit
+      est vitae.<em> Quia molestias porro </em>minima consequatur velit. Cumque,
+      accusantium fugit sapiente voluptates repellat explicabo blanditiis quasi
+      corporis odit porro ea minima nobis iusto in eius tenetur debitis nostrum
+      qui ipsa illo ullam eum minus vitae quam? Fugiat? Assumenda,
+      necessitatibus. Ex illum possimus saepe dolorum quam iure aliquam minus,
+      cum animi deserunt quae debitis quod nemo laudantium in numquam dolor
+      alias impedit commodi vel! Voluptas, sit neque. Numquam.
+    </p>
+    <p >Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, molestiae? Distinctio eum laborum repellendus assumenda quasi unde, delectus facilis ipsam, beatae iusto nam dolor architecto? Ut ab provident quidem veniam!f</p>
+<p>Lists</p>
+<ul type="circle">
+    <li>Apple</li>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, quae id incidunt fugiat similique quo repudiandae repellat illum numquam saepe atque, adipisci facere minima neque debitis velit corporis. Earum, aspernatur.</p>
+    <li>orange</li>
+    <li>grapes</li>
+</ul> 
+<ol type="a">
+    <li>apple</li>
+    <li>orange</li>
+    <li>mango</li>
+</ol>
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+</body>
+</html>
